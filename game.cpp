@@ -17,8 +17,6 @@ string PalavraAleatoria(){
 	x = rand()%3;
 	string valores[3] = { "chocolate", "batata", "docinho" };
 
-	//cout << valores[x];
-
 	return valores[x];
 
 }
@@ -96,7 +94,6 @@ void menu(){
 		switch(opcao){
 			case 1:
 				cout<< "\n* Jogo iniciado *\n\n";
-				//jogoIndividual();
 				Jogadas();
 
 				limpaTela();
