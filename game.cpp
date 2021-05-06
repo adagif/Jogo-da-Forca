@@ -51,6 +51,9 @@ void jogoIndividual(){
 	cout << po;
 }
 
+void imprimirStatus(){
+	
+}
 
 
 void menu(){
