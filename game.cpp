@@ -40,7 +40,7 @@ string palavraOculta(int tam){
 	return p;
 }
 
-void jogoIndividual(){
+string jogoIndividual(){
 	string p,po;
 	int tam;
 
@@ -48,7 +48,8 @@ void jogoIndividual(){
 	tam = tamanho(p);
 
 	po = palavraOculta(tam);
-	cout << po;
+	
+	return po;
 }
 
 int tentativas(int total, int chance){
@@ -62,14 +63,17 @@ int tentativas(int total, int chance){
 void Jogadas(){
 	int chance=0,total=5;
 	char letra;
+	string palavra = jogoIndividual();
 
 	while(tentativas(total, chance) != 0) {
-		
-		jogoIndividual();
-		cout << "\nChance: "<< total- chance << "\n\n";
+		limpaTela();
+		cout << palavra;
+		cout << "     [Chance: "<< total- chance << "]\n\n";
 		cout << "\nDigite uma letra: ";
 		cin >> letra;
+		cout << "\n";
 		chance ++;
+		limpaTela();
 	}
 
 }
