@@ -51,9 +51,30 @@ void jogoIndividual(){
 	cout << po;
 }
 
-void imprimirStatus(){
-	
+int tentativas(int total, int chance){
+	int x;
+
+	x = total - chance;
+
+	return x;
 }
+
+void Jogadas(){
+	int chance=0,total=5;
+	char letra;
+
+	while(tentativas(total, chance) != 0) {
+		
+		jogoIndividual();
+		cout << "\nChance: "<< total- chance << "\n\n";
+		cout << "\nDigite uma letra: ";
+		cin >> letra;
+		chance ++;
+	}
+
+}
+
+
 
 
 void menu(){
@@ -70,8 +91,9 @@ void menu(){
 
 		switch(opcao){
 			case 1:
-				cout<< "Jogo iniciado\n";
-				jogoIndividual();
+				cout<< "\n* Jogo iniciado *\n\n";
+				//jogoIndividual();
+				Jogadas();
 
 				limpaTela();
 				break;
